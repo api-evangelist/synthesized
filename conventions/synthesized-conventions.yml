@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://docs.synthesized.io/tdk/latest/user_guide/090_cicd/external_api_reference
+  + tdk-gha config shape. Cross-cutting request/response conventions of the
+  Synthesized Governor External API and the TDK runner.
+authentication:
+  style: api-key
+  header: X-Access-Key
+  see: authentication/synthesized-authentication.yml
+versioning:
+  style: uri-path
+  base_path: /external/api/v1
+  see: lifecycle/synthesized-lifecycle.yml
+transport:
+  protocol: REST over HTTPS
+  media_type: application/json
+async_execution:
+  note: >-
+    Workflow runs are asynchronous. POST /external/api/v1/workflow/{workflow_id}/run
+    returns a workflow_run_id and workflow_run_status; callers poll for status
+    (start_date, end_date, user_id, error_message) rather than blocking.
+error_envelope:
+  note: >-
+    Run/status responses surface failures via an error_message field alongside
+    workflow_run_status; standard HTTP status codes convey request-level errors.
+    No RFC 9457 problem+json envelope is documented.
+idempotency:
+  supported: false
+  note: No idempotency-key header or contract is documented for the External API.
+pagination:
+  note: Not documented; the External API surfaces small collections (agents/workers) without a documented pagination scheme.
+runner_config:
+  note: >-
+    The TDK runner is configuration-driven — a YAML user_config with
+    default_config.mode of MASKING or GENERATION and schema_creation_mode
+    (e.g. DROP_AND_CREATE), plus JDBC input_url/output_url source and target
+    connections. Used identically via Docker Compose, Helm, and the tdk-gha
+    GitHub Action.

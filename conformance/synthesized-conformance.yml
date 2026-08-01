@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://www.synthesized.io/faq + product/security pages and the Governor
+  External API docs. Standards the platform claims to align with or implement.
+  No published SOC 2 / ISO 27001 certification or trust center was found, so no
+  Compliance pointer is asserted — these are documented capabilities and
+  regulatory alignment, not audited certifications.
+standards:
+  - id: oauth2
+    conforms: false
+    evidence: External API authenticates with an X-Access-Key apiKey header, not OAuth2.
+  - id: oidc
+    conforms: true
+    evidence: Platform SSO supports OpenID Connect (in addition to SAML 2.0 and LDAP/Active Directory).
+  - id: saml2
+    conforms: true
+    evidence: Platform SSO integration via SAML 2.0.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors are conveyed via HTTP status codes + an error_message field; no application/problem+json envelope documented.
+  - id: gdpr-alignment
+    conforms: true
+    evidence: Policy-driven masking/subsetting aligned to GDPR, CCPA and CPRA for privacy-preserving test data (alignment, not an audited certification).

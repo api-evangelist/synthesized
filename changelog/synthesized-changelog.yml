@@ -1,0 +1,41 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.synthesized.io/tdk/latest/changelog/governor
+description: >-
+  Synthesized Governor / TDK changelog. Governor versioning was aligned to the
+  bundled TDK version starting v1.38.0 (December 2023). Recent-window capture;
+  the live changelog is the source of truth.
+scheme: semver-aligned-to-tdk
+current_version: v1.169
+entries:
+  - version: v1.169
+    date: '2026-07-14'
+    highlights: XML workflow enhancements — new schema-browsing tab and database-view filtering improvements.
+    breaking: false
+  - version: v1.168
+    highlights: Data sources identified via stable slugs (short, unique identifiers) instead of numeric IDs.
+    breaking: false
+  - version: v1.167
+    highlights: CSV upload fixes for Microsoft Edge; various XML/database improvements.
+    breaking: false
+  - version: v1.166
+    highlights: Enhanced diagnostic reports with detailed database breakdown.
+    breaking: false
+  - version: v1.159
+    highlights: Docker Compose production/demo distributions restructured — requires replacing existing compose files before upgrading.
+    breaking: true
+  - version: v1.151
+    highlights: 'Terminology shift: "Agents" renamed to "Workers" across UI and configuration; AGENT_* env vars remapped to WORKER_* at startup.'
+    breaking: false
+  - version: v1.127
+    highlights: Legacy PII scanner removed (now requires Kotlin Watchdog).
+    breaking: true
+  - version: v1.119
+    highlights: Projects feature introduced for organizing workflows with granular role-based access.
+    breaking: false
+  - version: v1.53
+    highlights: SDK tracking and access tokens deprecated/removed — replaced by API access keys.
+    breaking: true
+  - version: v1.41.0
+    highlights: JWT secret configuration now mandatory for all installations.
+    breaking: true

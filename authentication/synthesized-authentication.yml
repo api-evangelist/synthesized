@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://docs.synthesized.io/tdk/latest/user_guide/090_cicd/external_api_reference
+  — the Governor External API. Captured from the docs; no downloadable OpenAPI
+  spec is published (the reference is rendered client-side), so this profile is
+  documented rather than derived from a spec file in-repo.
+docs: https://docs.synthesized.io/tdk/latest/user_guide/090_cicd/external_api_reference
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+  - name: AccessKey
+    type: apiKey
+    in: header
+    parameter_name: X-Access-Key
+    description: >-
+      Every request to the Governor External API must include a valid access key
+      in the X-Access-Key header. Access keys are created/managed in the Governor
+      application and replaced the deprecated SDK tracking/access tokens (removed
+      in TDK v1.53).
+    sources: [docs]
+platform_auth:
+  note: >-
+    Platform-level (Governor UI / enterprise) authentication is separate from the
+    External API key. It includes JWT (mandatory JWT secret since v1.41), SAML 2.0
+    SSO, OpenID Connect, LDAP / Active Directory, and Kerberos, with role-based
+    access control (functional + sharing privileges).

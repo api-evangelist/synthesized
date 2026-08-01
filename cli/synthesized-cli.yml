@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  https://docs.synthesized.io/tdk/latest/ (CLI Overview / CLI Reference,
+  5-Minute Quick Start), github.com/synthesized-io/tdk-install and tdk-gha.
+  The TDK is a configuration-driven runner (YAML user_config + JDBC source/target)
+  delivered as a container image / GitHub Action rather than a rich subcommand CLI;
+  only capabilities the docs publish are recorded here.
+docs: https://docs.synthesized.io/tdk/latest/
+repos:
+  install_script: https://github.com/synthesized-io/tdk-install
+  github_action: https://github.com/synthesized-io/tdk-gha
+install:
+  quick_start: docker-compose up (5-Minute Quick Start)
+  install_script: tdk-install (Shell) from github.com/synthesized-io/tdk-install
+  docker: CLI with Docker
+  kubernetes: CLI with Kubernetes (Helm chart, github.com/synthesized-io/helm-charts)
+  aws: [AWS Marketplace, AWS EKS, AWS ECS Fargate]
+  gcp: [GCP Marketplace]
+  offline: Offline installation supported for restricted environments.
+modes:
+  - name: MASKING
+    description: Mask/transform data from a source database into a target while preserving referential structure.
+  - name: GENERATION
+    description: Generate synthetic data into a target schema.
+config:
+  note: >-
+    Behaviour is driven by a YAML user_config (default_config.mode,
+    schema_creation_mode such as DROP_AND_CREATE) plus JDBC input_url/output_url
+    connections and credentials. Same config runs under Docker, Helm, and the
+    tdk-gha GitHub Action.
+github_action_inputs: [input_url, input_username, input_password, output_url, output_username, output_password, user_config]

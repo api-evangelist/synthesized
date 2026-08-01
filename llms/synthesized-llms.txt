@@ -1,0 +1,56 @@
+# Synthesized.io
+
+## Overview
+
+Synthesized is an AI-native platform that automates test data provisioning, enabling faster application development and ensuring compliance through intelligent data masking, subsetting, and generation.
+
+## Documentation
+
+- [Synthesized SDK Documentation](https://docs.synthesized.io/sdk/latest/)
+  Comprehensive guide to using the Synthesized SDK for generating high-quality, privacy-preserving datasets for machine learning and data science applications.
+
+- [Synthesized TDK Documentation](https://docs.synthesized.io/tdk/latest/)
+  Detailed instructions on utilizing the Test Data Kit (TDK) for database masking and generation, suitable for integration into CI/CD pipelines.
+
+## Products
+
+- [Synthesized SDK](https://docs.synthesized.io/sdk/latest/)
+  A Python package available on PyPI that generates high-quality synthetic data, with features like data imputation and rebalancing to enhance machine learning model performance.
+
+- [Synthesized TDK](https://docs.synthesized.io/tdk/latest/)
+  A tool designed for DevOps teams to automate database masking and generation, supporting various databases including PostgreSQL, MySQL, Oracle, and SQL Server.
+
+## Solutions
+
+- [Test Data for Machine Learning](https://www.synthesized.io/test-data-for-machine-learning)
+  Solutions focused on improving ML model performance through synthetic data generation, data rebalancing, and compliance automation.
+
+- [Salesforce Data Provisioning](https://www.synthesized.io)
+  Privacy-preserving snapshots for Salesforce applications, enabling rapid and reliable development and testing.
+
+## Developer Resources
+
+- [Developer Hub](https://docs.synthesized.io)
+  Centralized resources including tutorials, API references, and guides for developers integrating Synthesized tools.
+
+- [GitHub Repository](https://github.com/synthesized-io)
+  Access to open-source projects, SDKs, and sample code to facilitate integration and customization.
+
+## Company Information
+
+- [About Us](https://www.synthesized.io/about-us)
+  Learn more about Synthesized's mission, team, and history.
+
+- [Careers](https://www.synthesized.io/careers)
+  Explore current job openings and opportunities to join the Synthesized team.
+
+- [Press Releases](https://www.synthesized.io/releases-newsroom)
+  Stay updated with the latest news and announcements from Synthesized.
+
+## Contact
+
+- [Contact Us](https://www.synthesized.io/contact-us)
+  Reach out for inquiries, support, or partnership opportunities.
+
+- [Support](https://www.synthesized.io/support)
+  Access support resources and get assistance with Synthesized products and services.

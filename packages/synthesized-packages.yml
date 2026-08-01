@@ -1,0 +1,36 @@
+generated: '2026-07-21'
+method: searched
+source: >-
+  PyPI registry + github.com/synthesized-io. First-party Python client
+  libraries published by Synthesized Ltd. (author email sdk-team@synthesized.io
+  / team@synthesized.io). No first-party npm, Maven, NuGet, Go, RubyGems,
+  Packagist or crates.io packages were found; the TDK runner ships as a
+  container image / GitHub Action rather than a language package.
+packages:
+  - language: python
+    registry: pypi
+    name: synthesized
+    url: https://pypi.org/project/synthesized/
+    install: pip install synthesized
+    version: '2.27'
+    official: true
+    description: Synthesized SDK — generates high-quality, privacy-preserving synthetic data with imputation and rebalancing for ML/data science.
+    repository: https://github.com/synthesized-io/synthesized-sdk
+  - language: python
+    registry: pypi
+    name: synthesized-insight
+    url: https://pypi.org/project/synthesized-insight/
+    install: pip install synthesized-insight
+    version: '0.7'
+    official: true
+    description: Synthesized data insights and evaluation framework (dataset metrics, quality/privacy evaluation).
+    repository: https://github.com/synthesized-io/synthesized-insight
+  - language: python
+    registry: pypi
+    name: fairlens
+    url: https://pypi.org/project/fairlens/
+    install: pip install fairlens
+    version: 0.1.0
+    official: true
+    description: Identify bias and measure fairness of your data.
+    repository: https://github.com/synthesized-io/fairlens

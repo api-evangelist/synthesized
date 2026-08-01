@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.synthesized.io/tdk/latest/changelog/governor
+versioning:
+  scheme: semver-aligned-to-tdk
+  current: v1.169
+  note: Governor version tracks the bundled TDK version (aligned since v1.38.0, Dec 2023).
+  docs: https://docs.synthesized.io/tdk/latest/changelog/governor
+deprecation:
+  policy: >-
+    Deprecated External API surfaces remain functional but are scheduled for
+    removal in a future version. Current deprecations — the GET
+    /external/api/v1/agents endpoint (replaced by /external/api/v1/workers) and
+    the useAgents query parameter (replaced by useWorkers); AGENT_* environment
+    variables (remapped to WORKER_* at startup, v1.151+).
+  docs: https://docs.synthesized.io/tdk/latest/user_guide/090_cicd/external_api_reference
+  sunset_header: unknown
+status_page: null
+sla: null
+deprecated_operations:
+  - path: GET /external/api/v1/agents
+    replaced_by: GET /external/api/v1/workers
+  - parameter: useAgents (workflow run query param)
+    replaced_by: useWorkers

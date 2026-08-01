@@ -1,7 +1,29 @@
 aid: synthesized
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/synthesized.png
 name: Synthesized
-description: Synthesized is a company surfaced as a portfolio company of seedcamp and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Synthesized is an AI-native test data management (TDM) platform that automates
+  the provisioning of production-realistic, privacy-preserving data for software
+  testing, database migrations, CI/CD pipelines, and AI/ML validation. Its Test
+  Data Kit (TDK) masks, subsets, and generates data across databases including
+  PostgreSQL, MySQL, Oracle, SQL Server, SAP HANA and Db2, and enterprise
+  applications like SAP, Oracle Fusion, Workday, Microsoft D365, ServiceNow and
+  Salesforce. The Governor External API and first-party Python SDK (published to
+  PyPI) let teams trigger masking and generation workflows programmatically and
+  embed compliant synthetic data into their pipelines, with policy-driven masking
+  aligned to GDPR, CCPA and CPRA.
 url: https://raw.githubusercontent.com/api-evangelist/synthesized/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +33,33 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Test Data
+- Synthetic Data
+- Data Masking
+- Data Privacy
+- Test Data Management
+- Compliance
+- Machine Learning
+- Databases
+- Developer Tools
+apis:
+- name: Governor External API
+  description: >-
+    REST API (OpenAPI 3.0.1, "Governor External API" v1.0.0) for the self-hosted
+    Synthesized Governor. Trigger TDK masking/generation workflows, list workers,
+    and check health. Authenticated with an X-Access-Key header. No downloadable
+    spec is published — the reference is rendered client-side.
+  humanURL: https://docs.synthesized.io/tdk/latest/user_guide/090_cicd/external_api_reference
+  baseURL: https://your-governor-host/external/api/v1
+  x-deployment: self-hosted (Docker Compose / Helm / AWS + GCP Marketplace); no vendor-hosted API host.
+  properties:
+  - type: APIReference
+    url: https://docs.synthesized.io/tdk/latest/user_guide/090_cicd/external_api_reference
+  - type: Authentication
+    url: authentication/synthesized-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -22,4 +67,51 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://synthesized.io
+  url: https://www.synthesized.io
+- type: DeveloperPortal
+  url: https://docs.synthesized.io
+- type: Documentation
+  url: https://docs.synthesized.io/tdk/latest/
+- type: APIReference
+  url: https://docs.synthesized.io/tdk/latest/user_guide/090_cicd/external_api_reference
+- type: GettingStarted
+  url: https://docs.synthesized.io/tdk/latest/
+- type: GitHubOrganization
+  url: https://github.com/synthesized-io
+- type: Blog
+  url: https://www.synthesized.io/blog
+- type: Support
+  url: https://www.synthesized.io/support
+- type: TermsOfService
+  url: https://www.synthesized.io/synthesized-software-terms
+- type: PrivacyPolicy
+  url: https://www.synthesized.io/privacy-policy
+- type: Packages
+  url: packages/synthesized-packages.yml
+- type: SDKs
+  url: packages/synthesized-packages.yml
+- type: LLMsTxt
+  url: llms/synthesized-llms.txt
+- type: Authentication
+  url: authentication/synthesized-authentication.yml
+- type: ChangeLog
+  url: changelog/synthesized-changelog.yml
+- type: Lifecycle
+  url: lifecycle/synthesized-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/synthesized-lifecycle.yml
+- type: Conventions
+  url: conventions/synthesized-conventions.yml
+- type: Conformance
+  url: conformance/synthesized-conformance.yml
+- type: CLI
+  url: cli/synthesized-cli.yml
+- type: MCPServer
+  url: mcp/synthesized-mcp.yml
+- type: DomainSecurity
+  url: security/synthesized-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v1

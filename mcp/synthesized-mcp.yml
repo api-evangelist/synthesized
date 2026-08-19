@@ -1,11 +1,8 @@
 generated: '2026-07-21'
 method: derived
 status: candidate
-source: >-
-  No official or hosted Synthesized MCP server was found (docs, npm
-  @modelcontextprotocol, MCP registries). Candidate tool list derived from the
-  documented Governor External API endpoints
-  (https://docs.synthesized.io/tdk/latest/user_guide/090_cicd/external_api_reference).
+source: No official or hosted Synthesized MCP server was found (docs, npm @modelcontextprotocol, MCP registries).
+  Candidate tool list derived from the documented Governor External API endpoints (https://docs.synthesized.io/tdk/latest/user_guide/090_cicd/external_api_reference).
   Not an authoritative provider artifact.
 server:
   name: synthesized-governor
@@ -13,12 +10,18 @@ server:
   note: Self-hosted Governor External API; no vendor-hosted MCP endpoint exists.
   auth: apiKey (X-Access-Key header)
 tools:
-  - name: check_health
-    description: Verify the Governor External API is reachable.
-    source_operation: GET /external/api/v1/healthy
-  - name: list_workers
-    description: List available TDK workers (formerly "agents").
-    source_operation: GET /external/api/v1/workers
-  - name: run_workflow
-    description: Run a masking/generation workflow by id, optionally on a worker (useWorkers=true).
-    source_operation: POST /external/api/v1/workflow/{workflow_id}/run
+- name: check_health
+  description: Verify the Governor External API is reachable.
+  source_operation: GET /external/api/v1/healthy
+- name: list_workers
+  description: List available TDK workers (formerly "agents").
+  source_operation: GET /external/api/v1/workers
+- name: run_workflow
+  description: Run a masking/generation workflow by id, optionally on a worker (useWorkers=true).
+  source_operation: POST /external/api/v1/workflow/{workflow_id}/run
+deployment:
+  mode: none
+  verified: derived
+  tools: 3
+  checked: '2026-08-12'
+  source: catalog MCP census

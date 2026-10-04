@@ -51,10 +51,10 @@ tags:
 - Test Data
 - Synthetic Data
 - Data Masking
-- Data Privacy
+- Privacy
 - Test Data Management
 - Compliance
-- Machine-Learning
+- Machine Learning
 - Database
 - Developer Tools
 tags_raw:
@@ -68,6 +68,7 @@ tags_raw:
 - Machine Learning
 - Databases
 - Developer Tools
+- Machine-Learning
 apis:
 - name: Governor External API
   description: >-

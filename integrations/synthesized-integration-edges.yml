@@ -1,0 +1,22 @@
+generated: '2026-10-13'
+method: searched
+checked:
+- https://azuremarketplace.microsoft.com/
+marketplace_apps: []
+edges:
+- partner_name: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_match: aggregator
+  type: marketplace
+  marketplace: azure-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Synthesized.io
+  listing_count: 2
+  apps:
+  - Synthesized TDK – Populate non-production environments with production-like data
+  - Synthesized.io SDK
+  seller_name: Synthesized.io
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'

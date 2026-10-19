@@ -1,7 +1,14 @@
 generated: '2026-10-13'
 method: searched
 checked:
+- https://api.nuget.org/v3
 - https://azuremarketplace.microsoft.com/
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -20,3 +27,59 @@ edges:
   seller_name: Synthesized.io
   detected_by: sweep-cloud-marketplaces.py
   detected: '2026-10-13'
+- partner_name: PyPI
+  partner: pypi
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Python)
+  evidence: https://pypi.org/project/fairlens/
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: PyPI (public registry JSON)
+    spec_file: null
+    language: Python
+    packages:
+    - name: fairlens
+      version: 0.1.0
+      released: '2021-08-12'
+      released_field: upload_time
+      lapsed: true
+      page: https://pypi.org/project/fairlens/
+      repo_leg: github-org:synthesized-io
+      publisher_leg: email:synthesized.io
+      matched_by: domain
+    - name: synthesized
+      version: '2.31'
+      released: '2026-09-11'
+      released_field: upload_time
+      lapsed: false
+      page: https://pypi.org/project/synthesized/
+      repo_leg: domain:synthesized.io
+      publisher_leg: email:synthesized.io
+      matched_by: domain
+    - name: synthesized-insight
+      version: '0.7'
+      released: '2022-04-24'
+      released_field: upload_time
+      lapsed: true
+      page: https://pypi.org/project/synthesized-insight/
+      repo_leg: domain:synthesized.io
+      publisher_leg: email:synthesized.io
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
+source:
+- https://api.nuget.org/v3
+- https://crates.io/api/v1
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
